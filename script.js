@@ -23,8 +23,13 @@ function clique(){
     document.getElementById("chances").innerHTML = "Tentativas: " + tentativas;
     if(tentativas == 0){
       document.getElementById("btn").disabled = true;
-      saida.innerHTML = "Acabaram as tentativas, o número sorteado era: " + sort;
+      if(valor == sort){
+        saida.innerHTML = "Acertou";
+      }else{
+        saida.innerHTML = "Acabaram as tentativas, o número sorteado era: " + sort;
+      }
     }
+
 }
 
 function novo(){
